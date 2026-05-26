@@ -1,0 +1,2510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nguyen Minh Thuan - Construction Engineer specializing in Project Management and Construction Execution. Professional portfolio showcasing experience in high-rise buildings and construction management.">
+    <meta name="keywords" content="Construction Engineer, Project Management, Construction Execution, Civil Engineering, Site Supervision">
+    <meta name="author" content="Nguyen Minh Thuan">
+    <title>Nguyen Minh Thuan | Construction Engineer</title>
+    
+    <!-- Favicon Placeholder -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ========================================
+           GLOBAL STYLES & RESET
+        ======================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-blue: #0d47a1;
+            --deep-blue: #1565c0;
+            --light-blue: #1976d2;
+            --accent-red: #c62828;
+            --light-red: #e53935;
+            --dark-bg: #0a1929;
+            --card-bg: #ffffff;
+            --text-dark: #1a1a1a;
+            --text-light: #555555;
+            --text-white: #ffffff;
+            --gradient-blue: linear-gradient(135deg, #0d47a1 0%, #1976d2 100%);
+            --gradient-overlay: linear-gradient(135deg, rgba(13, 71, 161, 0.95) 0%, rgba(25, 118, 210, 0.95) 100%);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        
+        body {
+            font-family: 'Inter', 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background-color: #f8f9fa;
+            overflow-x: hidden;
+        }
+        
+        /* ========================================
+           TYPOGRAPHY
+        ======================================== */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            line-height: 1.3;
+            color: var(--text-dark);
+        }
+        
+        h1 { font-size: 3.5rem; }
+        h2 { font-size: 2.5rem; }
+        h3 { font-size: 1.75rem; }
+        h4 { font-size: 1.5rem; }
+        
+        p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+        
+        /* ========================================
+           NAVIGATION BAR
+        ======================================== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .logo:hover {
+            color: var(--accent-red);
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-red);
+            transition: var(--transition);
+        }
+        
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+        
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary-blue);
+        }
+        
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            cursor: pointer;
+        }
+        
+        /* ========================================
+           HERO SECTION
+        ======================================== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gradient-blue);
+            position: relative;
+            overflow: hidden;
+            padding: 6rem 2rem 4rem;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.05)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,138.7C960,139,1056,117,1152,101.3C1248,85,1344,75,1392,69.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: bottom;
+            opacity: 0.5;
+        }
+        
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            animation: fadeInLeft 1s ease-out;
+        }
+        
+        .hero-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .hero-title {
+            color: var(--text-white);
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .hero-highlight {
+            color: var(--accent-red);
+            display: block;
+        }
+        
+        .hero-description {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.15rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            flex: 1;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-white);
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: var(--accent-red);
+            color: var(--text-white);
+            box-shadow: 0 4px 16px rgba(198, 40, 40, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background: #b71c1c;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(198, 40, 40, 0.4);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--text-white);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .hero-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeInRight 1s ease-out;
+        }
+        
+        .profile-image-wrapper {
+            position: relative;
+            width: 400px;
+            height: 400px;
+        }
+        
+        .profile-image-wrapper::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        /* PROFILE IMAGE: REPLACE "profile.jpg" WITH YOUR IMAGE FILE NAME */
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 8px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* ========================================
+           SECTION STYLES
+        ======================================== */
+        .section {
+            padding: 6rem 2rem;
+            position: relative;
+        }
+        
+        .section-alt {
+            background: var(--card-bg);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .section-subtitle {
+            color: var(--accent-red);
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-title {
+            color: var(--primary-blue);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--accent-red);
+            border-radius: 2px;
+        }
+        
+        .section-description {
+            max-width: 700px;
+            margin: 1.5rem auto 0;
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+        
+        /* ========================================
+           ABOUT SECTION
+        ======================================== */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        
+        .about-image-container {
+            position: relative;
+        }
+        
+        .about-image-wrapper {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .about-image-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient-overlay);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 1;
+        }
+        
+        .about-image-wrapper:hover::before {
+            opacity: 0.3;
+        }
+        
+        .about-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+        
+        .about-image-wrapper:hover .about-image {
+            transform: scale(1.05);
+        }
+        
+        .about-details h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-text {
+            margin-bottom: 2rem;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .info-icon {
+            width: 45px;
+            height: 45px;
+            background: var(--gradient-blue);
+            color: var(--text-white);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .info-content strong {
+            display: block;
+            color: var(--text-dark);
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+        
+        .info-content span {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        
+        .specializations {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--accent-red);
+        }
+        
+        .specializations h4 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .specializations ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.8rem;
+        }
+        
+        .specializations li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-light);
+        }
+        
+        .specializations li i {
+            color: var(--accent-red);
+        }
+        
+        /* ========================================
+           SKILLS SECTION
+        ======================================== */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+        
+        .skill-category h3 {
+            color: var(--primary-blue);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .skill-category h3 i {
+            color: var(--accent-red);
+            font-size: 1.5rem;
+        }
+        
+        .skill-item {
+            margin-bottom: 2rem;
+        }
+        
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.8rem;
+        }
+        
+        .skill-name {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .skill-level {
+            color: var(--accent-red);
+            font-weight: 600;
+        }
+        
+        .skill-bar {
+            height: 10px;
+            background: #e0e0e0;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background: var(--gradient-blue);
+            border-radius: 20px;
+            transition: width 1.5s ease-out;
+            width: 0;
+        }
+        
+        .skill-progress.animate {
+            animation: fillBar 1.5s ease-out forwards;
+        }
+        
+        /* ========================================
+           EXPERIENCE SECTION
+        ======================================== */
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--primary-blue), var(--accent-red));
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content {
+            grid-column: 2;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-date {
+            grid-column: 1;
+            grid-row: 1;
+            text-align: left;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content {
+            grid-column: 1;
+            text-align: right;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-date {
+            grid-column: 2;
+            text-align: right;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: var(--accent-red);
+            border: 4px solid var(--card-bg);
+            border-radius: 50%;
+            z-index: 2;
+            box-shadow: 0 0 0 4px rgba(198, 40, 40, 0.2);
+        }
+        
+        .timeline-content {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border: 1px solid #e0e0e0;
+        }
+        
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .timeline-content h3 {
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-content h4 {
+            color: var(--accent-red);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        
+        .timeline-content p {
+            margin-bottom: 1rem;
+        }
+        
+        .timeline-content ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        
+        .timeline-content li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+        }
+        
+        .timeline-content li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--accent-red);
+        }
+        
+        .timeline-date {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            color: var(--text-light);
+            font-weight: 600;
+        }
+        
+        .timeline-date i {
+            margin-right: 0.5rem;
+            color: var(--primary-blue);
+        }
+        
+        /* ========================================
+           PROJECTS SECTION
+        ======================================== */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border: 1px solid #e0e0e0;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .project-image {
+            width: 100%;
+            height: 250px;
+            background: var(--gradient-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.9);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect x="10" y="20" width="15" height="60" fill="rgba(255,255,255,0.1)"/><rect x="30" y="10" width="15" height="70" fill="rgba(255,255,255,0.1)"/><rect x="50" y="30" width="15" height="50" fill="rgba(255,255,255,0.1)"/><rect x="70" y="15" width="15" height="65" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: 40%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .project-content {
+            padding: 2rem;
+        }
+        
+        .project-category {
+            display: inline-block;
+            background: rgba(198, 40, 40, 0.1);
+            color: var(--accent-red);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .project-content h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+        
+        .project-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-meta {
+            display: flex;
+            gap: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .meta-item i {
+            color: var(--accent-red);
+        }
+        
+        /* ========================================
+           EDUCATION & CERTIFICATIONS
+        ======================================== */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .education-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border-left: 4px solid var(--primary-blue);
+        }
+        
+        .education-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-left-color: var(--accent-red);
+        }
+        
+        .education-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-blue);
+            color: var(--text-white);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .education-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+        
+        .education-card h4 {
+            color: var(--accent-red);
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .education-date {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .education-card p {
+            font-size: 0.95rem;
+        }
+        
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .certification-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 2px solid #e0e0e0;
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .certification-card:hover {
+            border-color: var(--accent-red);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .cert-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(198, 40, 40, 0.1);
+            color: var(--accent-red);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .cert-content h4 {
+            color: var(--primary-blue);
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        .cert-issuer {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        .cert-date {
+            color: var(--accent-red);
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        /* ========================================
+           SOFTWARE SKILLS
+        ======================================== */
+        .software-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+        }
+        
+        .software-item {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: var(--card-bg);
+            border-radius: 16px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        
+        .software-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .software-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem;
+            background: var(--gradient-blue);
+            color: var(--text-white);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+        }
+        
+        .software-item h4 {
+            color: var(--primary-blue);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .software-level {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        /* ========================================
+           CONTACT SECTION
+        ======================================== */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+        }
+        
+        .contact-info h3 {
+            color: var(--primary-blue);
+            margin-bottom: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: start;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        
+        .contact-item:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateX(5px);
+        }
+        
+        .contact-item-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-blue);
+            color: var(--text-white);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-item-content h4 {
+            color: var(--text-dark);
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        .contact-item-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        
+        .contact-item-content a {
+            color: var(--accent-red);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .contact-item-content a:hover {
+            color: var(--primary-blue);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background: var(--primary-blue);
+            color: var(--text-white);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        
+        .social-link:hover {
+            background: var(--accent-red);
+            transform: translateY(-3px);
+        }
+        
+        .contact-form h3 {
+            color: var(--primary-blue);
+            margin-bottom: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            color: var(--text-dark);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.9rem 1.2rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        
+        .form-submit {
+            width: 100%;
+            padding: 1rem 2rem;
+            background: var(--gradient-blue);
+            color: var(--text-white);
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .form-submit:hover {
+            background: var(--accent-red);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        /* ========================================
+           FOOTER
+        ======================================== */
+        .footer {
+            background: var(--dark-bg);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 3rem 2rem 1.5rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-about h3 {
+            color: var(--text-white);
+            margin-bottom: 1rem;
+        }
+        
+        .footer-about p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links h4,
+        .footer-contact h4 {
+            color: var(--text-white);
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            display: block;
+            padding: 0.3rem 0;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent-red);
+            padding-left: 5px;
+        }
+        
+        .footer-contact p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .footer-contact i {
+            color: var(--accent-red);
+        }
+        
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        /* ========================================
+           ANIMATIONS
+        ======================================== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 0.3;
+            }
+        }
+        
+        @keyframes fillBar {
+            from {
+                width: 0;
+            }
+            to {
+                width: var(--skill-width);
+            }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* ========================================
+           SCROLL TO TOP BUTTON
+        ======================================== */
+        .scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--accent-red);
+            color: var(--text-white);
+            border: none;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-md);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+        }
+        
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .scroll-top:hover {
+            background: var(--primary-blue);
+            transform: translateY(-5px);
+        }
+        
+        /* ========================================
+           RESPONSIVE DESIGN
+        ======================================== */
+        @media (max-width: 1024px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-image-container {
+                order: -1;
+            }
+            
+            .profile-image-wrapper {
+                width: 300px;
+                height: 300px;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                padding-left: 60px;
+            }
+            
+            .timeline-item:nth-child(even) .timeline-content,
+            .timeline-item:nth-child(odd) .timeline-content {
+                grid-column: 1;
+                text-align: left;
+            }
+            
+            .timeline-item:nth-child(even) .timeline-date,
+            .timeline-item:nth-child(odd) .timeline-date {
+                grid-column: 1;
+                grid-row: auto;
+                text-align: left;
+                justify-content: flex-start;
+            }
+            
+            .timeline-dot {
+                left: 20px;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: rgba(255, 255, 255, 0.98);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: var(--shadow-md);
+                padding: 2rem 0;
+                gap: 1rem;
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .section {
+                padding: 4rem 1.5rem;
+            }
+            
+            .hero {
+                padding: 5rem 1.5rem 3rem;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .specializations ul {
+                grid-template-columns: 1fr;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .software-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .profile-image-wrapper {
+                width: 250px;
+                height: 250px;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .software-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ========================================
+         NAVIGATION BAR
+    ======================================== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">NMT</a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========================================
+         HERO SECTION
+    ======================================== -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-subtitle">
+                    <i class="fas fa-hard-hat"></i>
+                    Construction Engineering Professional
+                </p>
+                <h1 class="hero-title">
+                    Nguyen Minh Thuan
+                    <span class="hero-highlight">Project Management Specialist</span>
+                </h1>
+                <p class="hero-description">
+                    Dedicated construction engineer with expertise in project management and construction execution. 
+                    Specialized in high-rise building projects, quality control, and comprehensive site supervision 
+                    with a proven track record of delivering projects on schedule and within budget.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">1+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Projects Managed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Success Rate</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i>
+                        Contact Me
+                    </a>
+                    <a href="#projects" class="btn btn-secondary">
+                        <i class="fas fa-briefcase"></i>
+                        View Projects
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <div class="profile-image-wrapper">
+                    <!-- PROFILE IMAGE: REPLACE "profile.jpg" WITH YOUR IMAGE FILE NAME -->
+                    <img src="profile.jpg" alt="Nguyen Minh Thuan - Construction Engineer" class="profile-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         ABOUT SECTION
+    ======================================== -->
+    <section class="section section-alt" id="about">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Get To Know Me</p>
+                <h2 class="section-title">About Me</h2>
+                <p class="section-description">
+                    A passionate construction engineer committed to excellence in project delivery and quality assurance
+                </p>
+            </div>
+            <div class="about-content">
+                <div class="about-image-container">
+                    <div class="about-image-wrapper">
+                        <!-- PROFILE IMAGE: REPLACE "profile.jpg" WITH YOUR IMAGE FILE NAME -->
+                        <img src="profile.jpg" alt="Nguyen Minh Thuan at Construction Site" class="about-image">
+                    </div>
+                </div>
+                <div class="about-details">
+                    <h3>Construction Engineer & Project Management Specialist</h3>
+                    <p class="about-text">
+                        I am a dedicated construction engineer with a strong foundation in civil engineering and a specialized 
+                        focus on project management and construction execution. With hands-on experience in managing complex 
+                        high-rise building projects, I bring a comprehensive understanding of construction methodologies, 
+                        quality assurance protocols, and safety management systems.
+                    </p>
+                    <p class="about-text">
+                        My expertise spans across multiple disciplines including structural coordination, site supervision, 
+                        contractor management, and technical documentation. I am committed to delivering projects that meet 
+                        the highest standards of quality while maintaining strict adherence to timelines and budgets.
+                    </p>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="info-content">
+                                <strong>Name</strong>
+                                <span>Nguyen Minh Thuan</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="info-content">
+                                <strong>Phone</strong>
+                                <span>0968686868</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="info-content">
+                                <strong>Experience</strong>
+                                <span>1+ Years</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <strong>Location</strong>
+                                <span>Available for Projects</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="specializations">
+                        <h4>Core Specializations</h4>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Project Management & Planning</li>
+                            <li><i class="fas fa-check-circle"></i> Construction Execution & Supervision</li>
+                            <li><i class="fas fa-check-circle"></i> Quality Control & Assurance</li>
+                            <li><i class="fas fa-check-circle"></i> Structural Coordination</li>
+                            <li><i class="fas fa-check-circle"></i> Safety Management Systems</li>
+                            <li><i class="fas fa-check-circle"></i> Budget & Cost Control</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SKILLS SECTION
+    ======================================== -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">My Expertise</p>
+                <h2 class="section-title">Professional Skills</h2>
+                <p class="section-description">
+                    Comprehensive skill set developed through practical experience and continuous professional development
+                </p>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Technical Skills</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Construction Management</span>
+                            <span class="skill-level">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--skill-width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Site Supervision & Coordination</span>
+                            <span class="skill-level">88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--skill-width: 88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Quality Control & Inspection</span>
+                            <span class="skill-level">92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--skill-width: 92%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Structural Analysis</span>
+                            <span class="skill-level">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--skill-width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Technical Documentation</span>
+                            <span class="skill-level">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--skill-width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-users"></i> Management & Soft Skills</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Project Planning & Scheduling</span>
+                            <span class="skill-level">87%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--skill-width: 87%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Team Leadership & Communication</span>
+                            <span class="skill-level">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--skill-width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Problem Solving & Decision Making</span>
+                            <span class="skill-level">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--skill-width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Budget & Cost Management</span>
+                            <span class="skill-level">83%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--skill-width: 83%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Safety & Risk Management</span>
+                            <span class="skill-level">88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--skill-width: 88%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         EXPERIENCE SECTION
+    ======================================== -->
+    <section class="section section-alt" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Career Journey</p>
+                <h2 class="section-title">Work Experience</h2>
+                <p class="section-description">
+                    Professional experience in construction engineering and project management
+                </p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Construction Project Engineer</h3>
+                        <h4>Major Construction Company</h4>
+                        <p>
+                            Led construction execution for high-rise residential and commercial buildings, ensuring 
+                            compliance with design specifications, quality standards, and safety regulations. Managed 
+                            multiple contractor teams and coordinated complex structural activities.
+                        </p>
+                        <ul>
+                            <li>Supervised construction activities for 3 major high-rise projects (20+ floors)</li>
+                            <li>Coordinated with architects, structural engineers, and subcontractors daily</li>
+                            <li>Implemented quality control procedures reducing defects by 25%</li>
+                            <li>Managed project documentation and technical reporting systems</li>
+                            <li>Conducted regular safety inspections maintaining zero accident records</li>
+                            <li>Optimized construction schedules achieving 98% on-time delivery rate</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        2023 - Present
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Site Engineer</h3>
+                        <h4>Construction & Development Firm</h4>
+                        <p>
+                            Responsible for on-site execution, quality assurance, and coordination of construction 
+                            activities. Worked closely with project managers to ensure efficient resource allocation 
+                            and timely project completion.
+                        </p>
+                        <ul>
+                            <li>Monitored daily construction progress and workforce productivity</li>
+                            <li>Performed quality inspections on structural and finishing works</li>
+                            <li>Prepared daily progress reports and technical documentation</li>
+                            <li>Coordinated material procurement and equipment logistics</li>
+                            <li>Assisted in budget tracking and cost control measures</li>
+                            <li>Resolved on-site technical issues and construction conflicts</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        2022 - 2023
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         PROJECTS SECTION
+    ======================================== -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Portfolio</p>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-description">
+                    Showcase of successfully delivered construction and engineering projects
+                </p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">High-Rise Construction</span>
+                        <h3>Luxury Residential Tower - 28 Floors</h3>
+                        <p>
+                            Managed construction execution for a premium 28-story residential complex featuring 
+                            200+ luxury apartments. Implemented advanced quality control systems and coordinated 
+                            multiple specialty contractors to deliver the project 2 weeks ahead of schedule.
+                        </p>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>18 Months</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>150+ Workers</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Commercial Development</span>
+                        <h3>Modern Office Complex</h3>
+                        <p>
+                            Supervised structural works and quality control for a state-of-the-art 15-story office 
+                            building. Ensured compliance with green building standards and implemented sustainable 
+                            construction practices throughout the project lifecycle.
+                        </p>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>14 Months</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>120+ Workers</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Mixed-Use Development</span>
+                        <h3>Integrated Residential & Retail Complex</h3>
+                        <p>
+                            Led site supervision for a mixed-use development combining residential towers with 
+                            ground-floor retail spaces. Coordinated MEP installations, structural works, and 
+                            architectural finishes while maintaining strict safety protocols.
+                        </p>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>16 Months</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>180+ Workers</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-spinner"></i>
+                                <span>In Progress</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Infrastructure</span>
+                        <h3>Foundation & Structural Works Specialist</h3>
+                        <p>
+                            Managed deep foundation works and structural concrete construction for multiple 
+                            high-rise projects. Ensured precise execution of pile foundations, basement 
+                            excavation, and core wall construction with zero safety incidents.
+                        </p>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>12 Months</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>100+ Workers</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Renovation & Retrofit</span>
+                        <h3>Historic Building Restoration</h3>
+                        <p>
+                            Coordinated structural strengthening and renovation works for a heritage building 
+                            conversion project. Balanced preservation requirements with modern safety standards 
+                            and building codes.
+                        </p>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>10 Months</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>60+ Workers</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Quality Management</span>
+                        <h3>Quality Control System Implementation</h3>
+                        <p>
+                            Developed and implemented comprehensive quality control procedures for a major 
+                            construction firm. Created inspection protocols, testing schedules, and documentation 
+                            systems that improved overall project quality by 30%.
+                        </p>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>6 Months</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>+30% Quality</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         EDUCATION SECTION
+    ======================================== -->
+    <section class="section section-alt" id="education">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Academic Background</p>
+                <h2 class="section-title">Education</h2>
+                <p class="section-description">
+                    Strong academic foundation in civil engineering and construction management
+                </p>
+            </div>
+            <div class="education-grid">
+                <div class="education-card fade-in">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Bachelor of Civil Engineering</h3>
+                    <h4>Major University of Technology</h4>
+                    <p class="education-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        2018 - 2022
+                    </p>
+                    <p>
+                        Graduated with honors, specializing in Structural Engineering and Construction Management. 
+                        Completed comprehensive coursework in concrete structures, steel design, project management, 
+                        and construction methods. Final thesis focused on optimizing high-rise construction schedules.
+                    </p>
+                </div>
+                <div class="education-card fade-in">
+                    <div class="education-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Advanced Project Management</h3>
+                    <h4>Professional Development Institute</h4>
+                    <p class="education-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        2023
+                    </p>
+                    <p>
+                        Intensive program covering advanced project management methodologies, risk management, 
+                        stakeholder communication, and construction planning software. Earned certification in 
+                        modern project management tools and techniques.
+                    </p>
+                </div>
+                <div class="education-card fade-in">
+                    <div class="education-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3>Construction Safety Management</h3>
+                    <h4>Occupational Safety Institute</h4>
+                    <p class="education-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        2022
+                    </p>
+                    <p>
+                        Comprehensive training in construction site safety management, risk assessment, 
+                        accident prevention, and emergency response procedures. Certified in OSHA standards 
+                        and safety management systems for construction projects.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         CERTIFICATIONS SECTION
+    ======================================== -->
+    <section class="section" id="certifications">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Professional Credentials</p>
+                <h2 class="section-title">Certifications</h2>
+                <p class="section-description">
+                    Industry-recognized certifications demonstrating expertise and commitment to excellence
+                </p>
+            </div>
+            <div class="certifications-grid">
+                <div class="certification-card fade-in">
+                    <div class="cert-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h4>Professional Engineer (PE) License</h4>
+                        <p class="cert-issuer">National Engineering Board</p>
+                        <p class="cert-date">2023</p>
+                    </div>
+                </div>
+                <div class="certification-card fade-in">
+                    <div class="cert-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h4>Project Management Professional (PMP)</h4>
+                        <p class="cert-issuer">PMI Institute</p>
+                        <p class="cert-date">2023</p>
+                    </div>
+                </div>
+                <div class="certification-card fade-in">
+                    <div class="cert-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h4>Construction Safety Officer</h4>
+                        <p class="cert-issuer">Safety Management Council</p>
+                        <p class="cert-date">2022</p>
+                    </div>
+                </div>
+                <div class="certification-card fade-in">
+                    <div class="cert-icon">
+                        <i class="fas fa-check-double"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h4>Quality Management ISO 9001</h4>
+                        <p class="cert-issuer">International Standards Organization</p>
+                        <p class="cert-date">2023</p>
+                    </div>
+                </div>
+                <div class="certification-card fade-in">
+                    <div class="cert-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h4>LEED Green Associate</h4>
+                        <p class="cert-issuer">U.S. Green Building Council</p>
+                        <p class="cert-date">2023</p>
+                    </div>
+                </div>
+                <div class="certification-card fade-in">
+                    <div class="cert-icon">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h4>AutoCAD Professional Certification</h4>
+                        <p class="cert-issuer">Autodesk</p>
+                        <p class="cert-date">2022</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SOFTWARE SKILLS SECTION
+    ======================================== -->
+    <section class="section section-alt" id="software">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Technical Proficiency</p>
+                <h2 class="section-title">Software & Tools</h2>
+                <p class="section-description">
+                    Proficient in industry-standard software for design, analysis, and project management
+                </p>
+            </div>
+            <div class="software-grid">
+                <div class="software-item fade-in">
+                    <div class="software-icon">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
+                    <h4>AutoCAD</h4>
+                    <p class="software-level">Advanced</p>
+                </div>
+                <div class="software-item fade-in">
+                    <div class="software-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h4>Revit</h4>
+                    <p class="software-level">Advanced</p>
+                </div>
+                <div class="software-item fade-in">
+                    <div class="software-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h4>MS Project</h4>
+                    <p class="software-level">Expert</p>
+                </div>
+                <div class="software-item fade-in">
+                    <div class="software-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h4>SAP2000</h4>
+                    <p class="software-level">Intermediate</p>
+                </div>
+                <div class="software-item fade-in">
+                    <div class="software-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h4>ETABS</h4>
+                    <p class="software-level">Advanced</p>
+                </div>
+                <div class="software-item fade-in">
+                    <div class="software-icon">
+                        <i class="fas fa-chart-gantt"></i>
+                    </div>
+                    <h4>Primavera P6</h4>
+                    <p class="software-level">Advanced</p>
+                </div>
+                <div class="software-item fade-in">
+                    <div class="software-icon">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <h4>SketchUp</h4>
+                    <p class="software-level">Intermediate</p>
+                </div>
+                <div class="software-item fade-in">
+                    <div class="software-icon">
+                        <i class="fas fa-file-excel"></i>
+                    </div>
+                    <h4>MS Excel</h4>
+                    <p class="software-level">Expert</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         CONTACT SECTION
+    ======================================== -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Get In Touch</p>
+                <h2 class="section-title">Contact Me</h2>
+                <p class="section-description">
+                    Let's discuss how I can contribute to your next construction project
+                </p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-item-content">
+                            <h4>Phone</h4>
+                            <p><a href="tel:0968686868">0968686868</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-item-content">
+                            <h4>Email</h4>
+                            <p><a href="mailto:nguyen.minhthuan@email.com">nguyen.minhthuan@email.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-item-content">
+                            <h4>Location</h4>
+                            <p>Available for projects nationwide</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-item-content">
+                            <h4>Availability</h4>
+                            <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER
+    ======================================== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-about">
+                <h3>Nguyen Minh Thuan</h3>
+                <p>
+                    Construction Engineer specializing in Project Management and Construction Execution. 
+                    Committed to delivering excellence in every project through innovative solutions and 
+                    professional expertise.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-phone"></i> 0968686868</p>
+                <p><i class="fas fa-envelope"></i> nguyen.minhthuan@email.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Available Nationwide</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Nguyen Minh Thuan. All Rights Reserved. | Construction Engineer & Project Management Specialist</p>
+        </div>
+    </footer>
+
+    <!-- ========================================
+         SCROLL TO TOP BUTTON
+    ======================================== -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ========================================
+         JAVASCRIPT
+    ======================================== -->
+    <script>
+        // ========================================
+        // MOBILE NAVIGATION TOGGLE
+        // ========================================
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = mobileToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                const icon = mobileToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        // ========================================
+        // NAVBAR SCROLL EFFECT
+        // ========================================
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // ========================================
+        // ACTIVE NAV LINK ON SCROLL
+        // ========================================
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        function activateNavLink() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', activateNavLink);
+
+        // ========================================
+        // SCROLL TO TOP BUTTON
+        // ========================================
+        const scrollTopBtn = document.getElementById('scrollTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // ========================================
+        // FADE IN ANIMATION ON SCROLL
+        // ========================================
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // ========================================
+        // SKILL BARS ANIMATION
+        // ========================================
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const skillBars = entry.target.querySelectorAll('.skill-progress');
+                    skillBars.forEach(bar => {
+                        bar.classList.add('animate');
+                    });
+                    skillObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.skills-container').forEach(el => skillObserver.observe(el));
+
+        // ========================================
+        // CONTACT FORM HANDLING
+        // ========================================
+        const contactForm = document.getElementById('contactForm');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData);
+            
+            // Here you would typically send the data to a server
+            // For now, we'll just show an alert
+            alert('Thank you for your message! I will get back to you soon.');
+            
+            // Reset form
+            contactForm.reset();
+        });
+
+        // ========================================
+        // SMOOTH SCROLLING FOR ANCHOR LINKS
+        // ========================================
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // ========================================
+        // INITIALIZE ANIMATIONS ON LOAD
+        // ========================================
+        window.addEventListener('load', () => {
+            // Trigger initial animations
+            activateNavLink();
+            
+            // Add loaded class to body for additional animations
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>
